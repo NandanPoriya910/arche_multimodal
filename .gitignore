@@ -1,0 +1,7 @@
+node_modules/
+.env
+dist/
+.DS_Store
+# runtime data: uploaded files, FAISS indexes, OCR cache
+backend/data/*
+!backend/data/.gitkeep
