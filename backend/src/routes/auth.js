@@ -28,7 +28,7 @@ async function assertCanSignIn(user, identifier, req) {
   if (!user.isActive) await deny('inactive', 403, 'This account is disabled. Please contact your administrator.');
 }
 
-const DEPARTMENT_FOR = { EMPLOYEE: 'General', HR: 'HR', FINANCE: 'Finance' };
+const DEPARTMENT_FOR = { EMPLOYEE: 'General', HR: 'HR' };
 const approverText = (role) => (role === ROLES.EMPLOYEE ? 'HR or an administrator' : 'an administrator');
 const pendingMessage = (role) => `Request received. Your ${role} account will be active once ${approverText(role)} approves it.`;
 
